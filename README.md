@@ -30,3 +30,16 @@ vi. (optional) Python3 to build tests and/or examples.
 3. `$ tar xvfz ../crow-v1.0+5.tar.gz`
 
 4. `$ rm crow-v1.0+5.tar.gz`
+
+### CMakeLists.txt
+```cmake
+cmake_minimum_required(VERSION  3.15)
+
+project(CrowPro)
+
+set(INCLUDE_PATHS boost_1_82_0 crow/include)
+
+add_executable(CrowPro main.cpp)
+
+target_include_directories(CrowPro PUBLIC ${INCLUDE_PATHS})
+```
